@@ -2,13 +2,13 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "My Awesome Project",
+  title: "Vue Component Template",
   description: "A VitePress Site",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     
     nav: [
-      { text: '组件', link: '/guide/features', activeMatch: '/guide/' },
+      { text: '组件', link: '/packages/features', activeMatch: '/packages/' },
       { text: '工具', link: '/utils/started', activeMatch: '/utils/' }
     ],
     footer: {
@@ -17,17 +17,13 @@ export default defineConfig({
     },
 
     sidebar: {
-      '/guide/': [
+      '/packages/': [
         {
           text: '指引',
           items: [
             {
-              text: '特性',
-              link: '/guide/features'
-            },
-            {
               text: '快速上手',
-              link: '/guide/started'
+              link: '/packages/started'
             }
           ]
         },
@@ -36,7 +32,7 @@ export default defineConfig({
           items: [
             {
               text: '按钮 Button',
-              link: '/guide/components/button'
+              link: '/packages/components/button'
             }
           ]
         }
