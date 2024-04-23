@@ -1,4 +1,4 @@
-# 按钮 Button
+# 按钮 button
 
 <br/>
 
@@ -20,13 +20,13 @@ const loading = ref(true)
 <br/>
 
 <div>
-  <Button>Default Button</Button>
-  <Button effect="reverse">Reverse Button</Button>
-  <Button type="primary">Primary Button</Button>
-  <Button type="danger">Danger Button</Button>
-  <Button type="dashed">Dashed Button</Button>
-  <Button type="text">Text Button</Button>
-  <Button type="link">Link Button</Button>
+  <button>Default button</button>
+  <button effect="reverse">Reverse button</button>
+  <button type="primary">Primary button</button>
+  <button type="danger">Danger button</button>
+  <button type="dashed">Dashed button</button>
+  <button type="text">Text button</button>
+  <button type="link">Link button</button>
 </div>
 
 ::: details Show Code
@@ -34,13 +34,13 @@ const loading = ref(true)
 ```vue
 <template>
   <div>
-    <Button>Default Button</Button>
-    <Button effect="reverse">Reverse Button</Button>
-    <Button type="primary">Primary Button</Button>
-    <Button type="danger">Danger Button</Button>
-    <Button type="dashed">Dashed Button</Button>
-    <Button type="text">Text Button</Button>
-    <Button type="link">Link Button</Button>
+    <button>Default button</button>
+    <button effect="reverse">Reverse button</button>
+    <button type="primary">Primary button</button>
+    <button type="danger">Danger button</button>
+    <button type="dashed">Dashed button</button>
+    <button type="text">Text button</button>
+    <button type="link">Link button</button>
   </div>
 </template>
 ```
@@ -49,13 +49,13 @@ const loading = ref(true)
 ## 禁用
 
 <div>
-  <Button disabled>Default Button</Button>
-  <Button disabled effect="reverse">Reverse Button</Button>
-  <Button disabled type="primary">Primary Button</Button>
-  <Button disabled type="danger">Danger Button</Button>
-  <Button disabled type="dashed">Dashed Button</Button>
-  <Button disabled type="text">Text Button</Button>
-  <Button disabled type="link">Link Button</Button>
+  <button disabled>Default button</button>
+  <button disabled effect="reverse">Reverse button</button>
+  <button disabled type="primary">Primary button</button>
+  <button disabled type="danger">Danger button</button>
+  <button disabled type="dashed">Dashed button</button>
+  <button disabled type="text">Text button</button>
+  <button disabled type="link">Link button</button>
 </div>
 
 ::: details Show Code
@@ -63,13 +63,13 @@ const loading = ref(true)
 ```vue
 <template>
   <div>
-    <Button disabled>Default Button</Button>
-    <Button disabled effect="reverse">Reverse Button</Button>
-    <Button disabled type="primary">Primary Button</Button>
-    <Button disabled type="danger">Danger Button</Button>
-    <Button disabled type="dashed">Dashed Button</Button>
-    <Button disabled type="text">Text Button</Button>
-    <Button disabled type="link">Link Button</Button>
+    <button disabled>Default button</button>
+    <button disabled effect="reverse">Reverse button</button>
+    <button disabled type="primary">Primary button</button>
+    <button disabled type="danger">Danger button</button>
+    <button disabled type="dashed">Dashed button</button>
+    <button disabled type="text">Text button</button>
+    <button disabled type="link">Link button</button>
   </div>
 </template>
 ```
@@ -79,9 +79,9 @@ const loading = ref(true)
 ## 三种尺寸
 
 <div>
-  <Button size="small">Small</Button>
-  <Button>Default</Button>
-  <Button size="large">Large</Button>
+  <button size="small">Small</button>
+  <button>Default</button>
+  <button size="large">Large</button>
 </div>
 
 ::: details Show Code
@@ -89,9 +89,9 @@ const loading = ref(true)
 ```vue
 <template>
   <div>
-    <Button size="small">Small</Button>
-    <Button>Default</Button>
-    <Button size="large">Large</Button>
+    <button size="small">Small</button>
+    <button>Default</button>
+    <button size="large">Large</button>
   </div>
 </template>
 ```
@@ -100,9 +100,9 @@ const loading = ref(true)
 
 ## 自定义样式
 
-<Button style="width: 120px; height: 40px;" size="large">
+<button style="width: 120px; height: 40px;" size="large">
   <p style="font-size: 18px;">自定义样式</p>
-</Button>
+</button>
 
 ::: details Show Code
 
@@ -113,9 +113,9 @@ function onClick (e: Event) {
 }
 </script>
 <template>
-  <Button style="width: 120px; height: 40px;" size="large">
+  <button style="width: 120px; height: 40px;" size="large">
     <p style="font-size: 18px;">自定义样式</p>
-  </Button>
+  </button>
 </template>
 ```
 
@@ -124,18 +124,18 @@ function onClick (e: Event) {
 ## 加载中状态
 
 <div>
-  <Button :loading="loading">Default Button</Button>
-  <Button effect="reverse" :loading="loading">Reverse Button</Button>
-  <Button type="primary" :loading="loading">Primary Button</Button>
-  <Button type="danger" :loading="loading">Danger Button</Button>
-  <Button type="dashed" :loading="loading">Dashed Button</Button>
-  <Button type="text" :loading="loading">Text Button</Button>
-  <Button type="link" :loading="loading">Link Button</Button>
+  <button :loading="loading">Default button</button>
+  <button effect="reverse" :loading="loading">Reverse button</button>
+  <button type="primary" :loading="loading">Primary button</button>
+  <button type="danger" :loading="loading">Danger button</button>
+  <button type="dashed" :loading="loading">Dashed button</button>
+  <button type="text" :loading="loading">Text button</button>
+  <button type="link" :loading="loading">Link button</button>
 </div>
 <br/>
 <div  style="margin-top: 10px;">
   <h3 style="margin-top: 0;">Loading state: </h3>
-  <Button @click="loading = !loading">切换状态</Button>
+  <button @click="loading = !loading">切换状态</button>
 </div>
 
 ::: details Show Code
@@ -147,13 +147,13 @@ const loading = ref(true)
 </script>
 <template>
   <div>
-    <Button :loading="loading">Default Button</Button>
-    <Button effect="reverse" :loading="loading">Reverse Button</Button>
-    <Button type="primary" :loading="loading">Primary Button</Button>
-    <Button type="danger" :loading="loading">Danger Button</Button>
-    <Button type="dashed" :loading="loading">Dashed Button</Button>
-    <Button type="text" :loading="loading">Text Button</Button>
-    <Button type="link" :loading="loading">Link Button</Button>
+    <button :loading="loading">Default button</button>
+    <button effect="reverse" :loading="loading">Reverse button</button>
+    <button type="primary" :loading="loading">Primary button</button>
+    <button type="danger" :loading="loading">Danger button</button>
+    <button type="dashed" :loading="loading">Dashed button</button>
+    <button type="text" :loading="loading">Text button</button>
+    <button type="link" :loading="loading">Link button</button>
   </div>
   <br/>
   <div align="center" style="margin-top: 10px;">
@@ -167,13 +167,13 @@ const loading = ref(true)
 
 ## 居中展示
 
-<Button center>Default Button</Button>
+<button center>Default button</button>
 
 ::: details Show Code
 
 ```vue
 <template>
-  <Button center>Default Button</Button>
+  <button center>Default button</button>
 </template>
 ```
 

@@ -1,8 +1,17 @@
 {
   "name": "vue3-component-template",
-  "version": "0.1.38",
+  "version": "0.0.1",
   "private": false,
   "type": "module",
+  "keywords": [
+    "vue3",
+    "vite"
+  ],
+  "license": "ISC",
+  "author": {
+    "name": "vue3-component-template",
+    "email": "vue3-component-template@test.com"
+  },
   "files": [
     "dist",
     "package.json",
@@ -22,7 +31,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs --port 9000 --open",
     "docs:build": "vitepress build docs",
     "docs:deploy": "sh scripts/deploy.sh",
     "build": "run-s clean build:lib",
@@ -41,15 +50,10 @@
     "@vuepic/vue-datepicker": "7.4.1",
     "@vueuse/core": "^10.8.0",
     "@vueuse/integrations": "^10.8.0",
-    "ant-design-vue": "^4.1.2",
     "core-js": "^3.36.0",
     "date-fns": "^3.3.1",
-    "naive-ui": "^2.38.0",
-    "qrcode": "^1.5.3",
-    "swiper": "^11.0.6",
     "vue": "^3.4.19",
-    "vue-router": "^4.3.0",
-    "vue3-component-template": "^0.1.38"
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
@@ -73,27 +77,11 @@
     "vitepress": "^1.0.1",
     "vue-tsc": "^2.0.6"
   },
-  "description": "An Amazing Vue3 UI Components Library.",
+  "description": "基于vue3 + vite的组件库模板",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/themusecatcher/vue3-component-template.git"
   },
-  "keywords": [
-    "Vue3",
-    "TS",
-    "Vite",
-    "Sass",
-    "Amazing",
-    "UI",
-    "Components",
-    "Tools"
-  ],
-  "author": "theMuseCatcher",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/themusecatcher/vue3-component-template/issues"
-  },
-  "homepage": "https://themusecatcher.github.io/vue3-component-template",
   "browserslist": [
     "> 1%",
     "last 2 versions",
