@@ -1,8 +1,6 @@
 # 快速上手
 
 
-<Watermark fullscreen content="Vue Amazing UI" />
-
 ## 安装
 
 ::: code-group
