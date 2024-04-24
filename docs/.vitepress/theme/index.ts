@@ -1,8 +1,8 @@
 import DefaultTheme from 'vitepress/theme'
 import './global.scss' 
 
-import Vue3ComponentTemplate from '../../../dist/vue3-component-template'
-import '../../../dist/index.css'
+import Vue3ComponentTemplate from '../../../dist'
+import '../../../dist/style.css'
 
 export default {
   extends: DefaultTheme, // or ...DefaultTheme
