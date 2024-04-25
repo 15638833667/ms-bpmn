@@ -15,10 +15,12 @@ import {
 import type { App } from 'vue'
 
 import Button from './button'
+import Alert from './alert'
 
 // 所有组件列表
 const components = [
   Button,
+  Alert
 ]
 
 // 定义 install 方法
@@ -49,6 +51,7 @@ export {
 }
 export {
   Button,
+  Alert
 }
 
 const Vue3ComponentTemplate = {

@@ -12,10 +12,5 @@ const routeName = computed(() => {
 })
 </script>
 <template>
-  <a-config-provider :theme="theme">
-    <Watermark content="Vue3 Component Template" v-if="routeName !== 'Watermark'">
-      <RouterView />
-    </Watermark>
-    <RouterView v-else />
-  </a-config-provider>
+  <h3>{{ routeName  }}</h3>
 </template>

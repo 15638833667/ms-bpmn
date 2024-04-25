@@ -8,6 +8,11 @@
     "paths": {
       "@/*": ["./src/*"],
       "images/*": ["./src/assets/images"]
-    }
+    },
+    "target": "esnext",
+    "module": "esnext",
+    "strict": false,
+    "jsx": "preserve",
+    "moduleResolution": "node"
   },
 }

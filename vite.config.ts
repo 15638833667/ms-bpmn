@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path, { resolve } from 'path';
-
 import dts from 'vite-plugin-dts';
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,6 +14,12 @@ export default defineConfig({
       insertTypesEntry: true,
       cleanVueFileName: true,
       include: ['packages/**/*']
+    }),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
     })
   ],
   resolve: {
@@ -30,10 +38,11 @@ export default defineConfig({
       fileName: 'index' // 输出的包文件名，默认是 package.json 的 name 选项
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'element-plus'],
       output: {
         globals: {
-          vue: 'Vue'
+          vue: 'Vue',
+          "element-plus": "ElementPlus"
         }
       }
     }
