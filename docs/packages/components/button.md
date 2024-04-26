@@ -1,4 +1,4 @@
-# 按钮 Button
+# 按钮 ms-button
 
 <br/>
 
@@ -20,13 +20,9 @@ const loading = ref(true)
 <br/>
 
 <div>
-  <Button>Default Button</Button>
-  <Button effect="reverse">Reverse Button</Button>
-  <Button type="primary">Primary Button</Button>
-  <Button type="danger">Danger Button</Button>
-  <Button type="dashed">Dashed Button</Button>
-  <Button type="text">Text Button</Button>
-  <Button type="link">Link Button</Button>
+  <ms-button type="default">Default ms-button</ms-button>
+  <ms-button type="primary">Primary ms-button</ms-button>
+  <ms-button type="danger">Danger ms-button</ms-button>
 </div>
 
 ::: details Show Code
@@ -34,146 +30,10 @@ const loading = ref(true)
 ```vue
 <template>
   <div>
-    <Button>Default Button</Button>
-    <Button effect="reverse">Reverse Button</Button>
-    <Button type="primary">Primary Button</Button>
-    <Button type="danger">Danger Button</Button>
-    <Button type="dashed">Dashed Button</Button>
-    <Button type="text">Text Button</Button>
-    <Button type="link">Link Button</Button>
+    <ms-button>Default ms-button</ms-button>
+    <ms-button type="primary">Primary ms-button</ms-button>
+    <ms-button type="danger">Danger ms-button</ms-button>
   </div>
-</template>
-```
-
-:::
-## 禁用
-
-<div>
-  <Button disabled>Default Button</Button>
-  <Button disabled effect="reverse">Reverse Button</Button>
-  <Button disabled type="primary">Primary Button</Button>
-  <Button disabled type="danger">Danger Button</Button>
-  <Button disabled type="dashed">Dashed Button</Button>
-  <Button disabled type="text">Text Button</Button>
-  <Button disabled type="link">Link Button</Button>
-</div>
-
-::: details Show Code
-
-```vue
-<template>
-  <div>
-    <Button disabled>Default Button</Button>
-    <Button disabled effect="reverse">Reverse Button</Button>
-    <Button disabled type="primary">Primary Button</Button>
-    <Button disabled type="danger">Danger Button</Button>
-    <Button disabled type="dashed">Dashed Button</Button>
-    <Button disabled type="text">Text Button</Button>
-    <Button disabled type="link">Link Button</Button>
-  </div>
-</template>
-```
-
-:::
-
-## 三种尺寸
-
-<div>
-  <Button size="small">Small</Button>
-  <Button>Default</Button>
-  <Button size="large">Large</Button>
-</div>
-
-::: details Show Code
-
-```vue
-<template>
-  <div>
-    <Button size="small">Small</Button>
-    <Button>Default</Button>
-    <Button size="large">Large</Button>
-  </div>
-</template>
-```
-
-:::
-
-## 自定义样式
-
-<Button style="width: 120px; height: 40px;" size="large">
-  <p style="font-size: 18px;">自定义样式</p>
-</Button>
-
-::: details Show Code
-
-```vue
-<script setup lang="ts">
-function onClick (e: Event) {
-  console.log('click')
-}
-</script>
-<template>
-  <Button style="width: 120px; height: 40px;" size="large">
-    <p style="font-size: 18px;">自定义样式</p>
-  </Button>
-</template>
-```
-
-:::
-
-## 加载中状态
-
-<div>
-  <Button :loading="loading">Default Button</Button>
-  <Button effect="reverse" :loading="loading">Reverse Button</Button>
-  <Button type="primary" :loading="loading">Primary Button</Button>
-  <Button type="danger" :loading="loading">Danger Button</Button>
-  <Button type="dashed" :loading="loading">Dashed Button</Button>
-  <Button type="text" :loading="loading">Text Button</Button>
-  <Button type="link" :loading="loading">Link Button</Button>
-</div>
-<br/>
-<div style="margin-top: 10px;">
-  <h3 style="margin-top: 0;">Loading state: </h3>
-  <Button @click="loading = !loading">Toggle Loading</Button>
-</div>
-
-::: details Show Code
-
-```vue
-<script setup lang="ts">
-import { ref } from 'vue'
-const loading = ref(true)
-</script>
-<template>
-  <div>
-    <Button :loading="loading">Default Button</Button>
-    <Button effect="reverse" :loading="loading">Reverse Button</Button>
-    <Button type="primary" :loading="loading">Primary Button</Button>
-    <Button type="danger" :loading="loading">Danger Button</Button>
-    <Button type="dashed" :loading="loading">Dashed Button</Button>
-    <Button type="text" :loading="loading">Text Button</Button>
-    <Button type="link" :loading="loading">Link Button</Button>
-  </div>
-  <br/>
-  <div align="center" style="margin-top: 10px;">
-    <h3 style="margin-top: 0;">Loading state: </h3>
-    <Switch v-model:checked="loading" />
-  </div>
-</template>
-```
-
-:::
-
-## 居中展示
-
-<Button center>Default Button</Button>
-
-::: details Show Code
-
-```vue
-<template>
-  <Button center>Default Button</Button>
 </template>
 ```
 

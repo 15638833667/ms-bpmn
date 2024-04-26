@@ -14,12 +14,12 @@ import {
 } from './utils'
 import type { App } from 'vue'
 
-import Button from './button'
+import MsButton from './msButton'
 import Alert from './alert'
 
 // 所有组件列表
 const components = [
-  Button,
+  MsButton,
   Alert
 ]
 
@@ -50,7 +50,7 @@ export {
   toggleDark
 }
 export {
-  Button,
+  MsButton,
   Alert
 }
 
