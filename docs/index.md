@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Vue Component Template"
+  name: "ms-bpmn"
   text: ""
   tagline: My great project tagline
   actions:
