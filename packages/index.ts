@@ -15,12 +15,10 @@ import {
 import type { App } from 'vue'
 
 import MsButton from './msButton'
-import Alert from './alert'
 
 // 所有组件列表
 const components = [
-  MsButton,
-  Alert
+  MsButton
 ]
 
 // 定义 install 方法
@@ -50,8 +48,7 @@ export {
   toggleDark
 }
 export {
-  MsButton,
-  Alert
+  MsButton
 }
 
 const Vue3ComponentTemplate = {

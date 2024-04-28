@@ -31,10 +31,6 @@ export default defineConfig({
           text: '组件',
           items: [
             {
-              text: '警告提示 Alert',
-              link: '/guide/components/alert'
-            },
-            {
               text: '按钮 Button',
               link: '/packages/components/button'
             }

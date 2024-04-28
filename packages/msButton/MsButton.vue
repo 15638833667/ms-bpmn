@@ -29,24 +29,4 @@ function onClick (e: Event) {
 }
 </script>
 <style lang="scss" scoped>
-.button-wrapper {
-  width: 100px;
-  height: 36px;
-  span {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    line-height: 36px;
-    text-align: center;
-    color: 666;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    &:hover {
-      background-color: #eee;
-    }
-  }
-}
 </style>
