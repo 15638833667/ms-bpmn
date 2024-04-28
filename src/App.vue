@@ -24,8 +24,8 @@
       Your browser does not support Clipboard API
     </p>
   </div> -->
-  <div class="app-item">
-    
+  <div class="ms-bpmn-test-container">
+    <ms-bpmn>test</ms-bpmn>
   </div>
 </template>
 <script setup lang="ts">
@@ -48,5 +48,14 @@ const { text, isSupported, copy } = useClipboard()
 <style lang="scss" scoped>
   .app-item {
     margin-bottom: 20px;
+  }
+  .ms-bpmn-test-container {
+    width: 1200px;
+    height: 600px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
   }
 </style>
