@@ -16,7 +16,7 @@ pnpm build
 # 提交版本更新代码到github
 git add .
 
-git commit -m "feat: update"
+git commit -m "feat: update && publish"
 
 git pull
 
