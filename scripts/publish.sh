@@ -15,7 +15,11 @@ pnpm build
 
 # 提交版本更新代码到github
 git add .
+
 git commit -m "feat: update"
+
+git pull
+
 git push
 
 # echo "当前版本：$version"
