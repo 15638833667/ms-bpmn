@@ -25,7 +25,8 @@
     </p>
   </div> -->
   <div class="ms-bpmn-test-container">
-    <ms-bpmn>test</ms-bpmn>
+    <ms-button>test</ms-button>
+    <ms-bpmn></ms-bpmn>
   </div>
 </template>
 <script setup lang="ts">

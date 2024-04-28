@@ -8,7 +8,7 @@ set -e
 # echo "发布前版本：$version"
 
 # 打包构建
-pnpm build
+npm run build
 
 # 升级 ms-bpmn-js 依赖版本
 # pnpm up ms-bpmn-js@$version
@@ -25,4 +25,4 @@ git push
 # echo "当前版本：$version"
 
 # 发布到npm，pnpm(高性能的npm)
-pnpm publish --registry http://192.168.3.105:15001/repository/npm-common/
+npm publish --registry http://192.168.3.105:15001/repository/npm-common/
