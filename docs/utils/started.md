@@ -20,7 +20,7 @@ import {
   downloadFile,
   formatNumber,
   toggleDark
-} from 'vue3-component-template'
+} from 'ms-bpmn'
 </script>
 ```
 

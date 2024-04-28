@@ -30,7 +30,7 @@ function throttle (fn: Function, delay = 300): any {
 
 <script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue'
-import { throttle } from 'vue3-component-template'
+import { throttle } from 'ms-bpmn'
 
 onMounted(() => {
   document.onscroll = throttle(showPosition, 1000)
@@ -52,7 +52,7 @@ function showPosition () {
 ```vue
 <script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue'
-import { throttle } from 'vue3-component-template'
+import { throttle } from 'ms-bpmn'
 
 onMounted(() => {
   document.onscroll = throttle(showPosition, 1000)

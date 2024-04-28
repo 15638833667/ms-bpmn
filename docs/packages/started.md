@@ -6,19 +6,19 @@
 ::: code-group
 
 ```sh [npm]
-$ npm add vue3-component-template
+$ npm add ms-bpmn
 ```
 
 ```sh [pnpm]
-$ pnpm add vue3-component-template
+$ pnpm add ms-bpmn
 ```
 
 ```sh [yarn]
-$ yarn add vue3-component-template
+$ yarn add ms-bpmn
 ```
 
 ```sh [bun]
-$ bun add vue3-component-template
+$ bun add ms-bpmn
 ```
 
 :::
@@ -31,11 +31,11 @@ $ bun add vue3-component-template
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import vue3ComponentTemplate from 'vue3-component-template'
-import 'vue3-component-template/css'
+import MsBpmn from 'ms-bpmn'
+import 'ms-bpmn/css'
 
 const app = createApp(App)
-app.use(vue3ComponentTemplate)
+app.use(MsBpmn)
 
 app.mount('#app')
 ```
@@ -44,8 +44,8 @@ app.mount('#app')
 
 ```vue
 <script setup lang="ts">
-import { Button } from 'vue3-component-template'
-import 'vue3-component-template/css'
+import { Button } from 'ms-bpmn'
+import 'ms-bpmn/css'
 </script>
 
 <template>

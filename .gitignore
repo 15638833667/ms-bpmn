@@ -9,6 +9,8 @@ lerna-debug.log*
 
 package-lock.json
 
+pnpm-lock.yaml
+
 docs/.vitepress/cache/*
 
 components.d.ts

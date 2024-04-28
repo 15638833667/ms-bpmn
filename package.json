@@ -1,5 +1,5 @@
 {
-  "name": "vue3-component-template",
+  "name": "ms-bpmn",
   "version": "0.1.0",
   "private": false,
   "type": "module",
@@ -9,8 +9,8 @@
   ],
   "license": "ISC",
   "author": {
-    "name": "vue3-component-template",
-    "email": "vue3-component-template@test.com"
+    "name": "ms-bpmn",
+    "email": "ms-bpmn@test.com"
   },
   "files": [
     "dist",
@@ -73,7 +73,7 @@
   "description": "基于vue3 + vite的组件库模板",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/themusecatcher/vue3-component-template.git"
+    "url": "git+https://github.com/themusecatcher/ms-bpmn.git"
   },
   "browserslist": [
     "> 1%",

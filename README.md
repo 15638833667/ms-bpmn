@@ -1,4 +1,4 @@
-# vue3-component-template
+# ms-bpmn
 
 *该组件库采用 `Vue@3.4.19`+ `TypeScript@5.3.3` + `Vite@5.1.4` + `Less@4.2.0` 实现！*<br/>
 *所有组件样式 `CSS` 均使用 `box-sizing: border-box;` 模式！*<br/>
@@ -7,16 +7,16 @@
 
 ## Document & Online preview
 
-[Vue3 Component Template](https://themusecatcher.github.io/vue3-component-template/)
+[Vue3 Component Template](https://themusecatcher.github.io/ms-bpmn/)
 
 ## Install & Use
 
 ```bash
-pnpm i vue3-component-template
+pnpm i ms-bpmn
 # or
-npm install vue3-component-template
+npm install ms-bpmn
 # or
-yarn add vue3-component-template
+yarn add ms-bpmn
 ```
 
 Import and register component
@@ -27,8 +27,8 @@ Import and register component
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import Vue3ComponentTemplate from 'vue3-component-template'
-import 'vue3-component-template/css'
+import Vue3ComponentTemplate from 'ms-bpmn'
+import 'ms-bpmn/css'
 
 const app = createApp(App)
 app.use(Vue3ComponentTemplate)
@@ -38,15 +38,15 @@ app.use(Vue3ComponentTemplate)
 
 ```vue
 <script setup lang="ts">
-import { Button } from 'vue3-component-template'
-import 'vue3-component-template/css'
+import { Button } from 'ms-bpmn'
+import 'ms-bpmn/css'
 </script>
 ```
 
 ## Use CDN in Project
 
 ```html
-<script src="https://unpkg.com/vue3-component-template@latest"></script>
+<script src="https://unpkg.com/ms-bpmn@latest"></script>
 ```
 
 ## Project
@@ -54,13 +54,13 @@ import 'vue3-component-template/css'
 - Get the project code
 
 ```sh
-git clone https://github.com/themusecatcher/vue3-component-template.git
+git clone https://github.com/themusecatcher/ms-bpmn.git
 ```
 
 - Install dependencies
 
 ```sh
-cd vue3-component-template
+cd ms-bpmn
 
 pnpm i
 ```
