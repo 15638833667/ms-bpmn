@@ -35,7 +35,7 @@ export default defineConfig({
       formats: ['es', 'umd'],
       // __dirname 的值是 vite.config.ts 文件所在目录
       entry: resolve(__dirname, 'packages', 'index.ts'),  // entry 是必需的，因为库不能使用HTML作为入口。
-      name: 'Vue3ComponentTemplate', // 暴露的全局变量
+      name: 'MsBpmn', // 暴露的全局变量
       fileName: 'index' // 输出的包文件名，默认是 package.json 的 name 选项
     },
     rollupOptions: { // 自定义底层的Rollup打包配置
@@ -44,7 +44,7 @@ export default defineConfig({
       ],
       external: ['vue', 'element-plus'],
       output: {
-        name: 'Vue3ComponentTemplate',
+        name: 'MsBpmn',
         exports: 'named',
         externalLiveBindings: false,
         globals: {

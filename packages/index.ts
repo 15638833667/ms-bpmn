@@ -51,7 +51,7 @@ export {
   MsButton
 }
 
-const Vue3ComponentTemplate = {
+const MsBpmn = {
   install
 }
-export default Vue3ComponentTemplate
+export default MsBpmn
