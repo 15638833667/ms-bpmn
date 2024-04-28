@@ -1,6 +1,6 @@
 
 <template>
-  <el-button :type="type" :size="size" :disabled="disabled" :loading="loading" @click="onClick">
+  <el-button class="ms-bpmn-test-button" :type="type" :size="size" :disabled="disabled" :loading="loading" @click="onClick">
     <slot>{{ name }}</slot>
   </el-button>
 </template>
