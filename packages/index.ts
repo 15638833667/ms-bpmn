@@ -15,10 +15,12 @@ import {
 import type { App } from 'vue'
 
 import MsButton from './msButton'
+import MsBpmn from './msBpmn'
 
 // 所有组件列表
 const components = [
-  MsButton
+  MsButton,
+  MsBpmn
 ]
 
 // 定义 install 方法
@@ -48,10 +50,11 @@ export {
   toggleDark
 }
 export {
-  MsButton
+  MsButton,
+  MsBpmn
 }
 
-const MsBpmn = {
+const MsBpmnJs = {
   install
 }
-export default MsBpmn
+export default MsBpmnJs

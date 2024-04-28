@@ -1,5 +1,5 @@
 <template>
-  <div class="app-item">
+  <!-- <div class="app-item">
     <input v-model="name" placeholder="Enter your name" />
     <button @click="saveName">Save</button>
   </div>
@@ -23,6 +23,9 @@
     <p v-else>
       Your browser does not support Clipboard API
     </p>
+  </div> -->
+  <div class="app-item">
+    
   </div>
 </template>
 <script setup lang="ts">

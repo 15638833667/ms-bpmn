@@ -27,11 +27,11 @@ Import and register component
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import MsBpmn from 'ms-bpmn'
+import MsBpmnJs from 'ms-bpmn'
 import 'ms-bpmn/css'
 
 const app = createApp(App)
-app.use(MsBpmn)
+app.use(MsBpmnJs)
 ```
 
 **Local**
