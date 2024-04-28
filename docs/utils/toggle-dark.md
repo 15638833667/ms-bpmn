@@ -30,7 +30,7 @@ html.dark { // 暗黑模式
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { toggleDark } from 'ms-bpmn'
+import { toggleDark } from 'ms-bpmn-js'
 
 const themeDark = ref()
 const observer = ref()
@@ -64,7 +64,7 @@ function onThemeChange () {
 ```vue
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { toggleDark } from 'ms-bpmn'
+import { toggleDark } from 'ms-bpmn-js'
 
 const themeDark = ref()
 onMounted(() => {

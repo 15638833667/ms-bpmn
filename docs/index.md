@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "ms-bpmn"
+  name: "ms-bpmn-js"
   text: ""
   tagline: My great project tagline
   actions:

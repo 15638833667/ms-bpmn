@@ -7,7 +7,7 @@
 
 declare module '*.js'
 declare module '*.gz'
-declare module 'ms-bpmn'
+declare module 'ms-bpmn-js'
 declare module 'naive-ui'
 declare module '*.json'
 declare module 'minimist'

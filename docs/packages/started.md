@@ -6,19 +6,19 @@
 ::: code-group
 
 ```sh [npm]
-$ npm add ms-bpmn
+$ npm add ms-bpmn-js
 ```
 
 ```sh [pnpm]
-$ pnpm add ms-bpmn
+$ pnpm add ms-bpmn-js
 ```
 
 ```sh [yarn]
-$ yarn add ms-bpmn
+$ yarn add ms-bpmn-js
 ```
 
 ```sh [bun]
-$ bun add ms-bpmn
+$ bun add ms-bpmn-js
 ```
 
 :::
@@ -31,8 +31,8 @@ $ bun add ms-bpmn
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import MsBpmnJs from 'ms-bpmn'
-import 'ms-bpmn/css'
+import MsBpmnJs from 'ms-bpmn-js'
+import 'ms-bpmn-js/css'
 
 const app = createApp(App)
 app.use(MsBpmnJs)
@@ -44,8 +44,8 @@ app.mount('#app')
 
 ```vue
 <script setup lang="ts">
-import { Button } from 'ms-bpmn'
-import 'ms-bpmn/css'
+import { Button } from 'ms-bpmn-js'
+import 'ms-bpmn-js/css'
 </script>
 
 <template>

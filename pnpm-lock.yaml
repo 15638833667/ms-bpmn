@@ -35,7 +35,7 @@ dependencies:
   vue:
     specifier: ^3.4.19
     version: 3.4.19(typescript@5.3.3)
-  ms-bpmn:
+  ms-bpmn-js:
     specifier: ^0.1.38
     version: 0.1.38(typescript@5.3.3)
   vue-router:
@@ -4408,7 +4408,7 @@ packages:
       vue: 3.4.19(typescript@5.3.3)
     dev: false
 
-  /ms-bpmn@0.1.38(typescript@5.3.3):
+  /ms-bpmn-js@0.1.38(typescript@5.3.3):
     resolution: {integrity: sha512-KtR3IiDLs8TQGvkDd1Q427ya4RRglRzdKPz8pkoZG4tXdoViDiq8lfNomo2BsJa2HqjhWjkk27BQNvjrFDUXuA==}
     dependencies:
       '@vuepic/vue-datepicker': 7.4.1(vue@3.4.19)

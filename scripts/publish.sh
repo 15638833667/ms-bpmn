@@ -10,8 +10,8 @@ set -e
 # 打包构建
 pnpm build
 
-# 升级 ms-bpmn 依赖版本
-# pnpm up ms-bpmn@$version
+# 升级 ms-bpmn-js 依赖版本
+# pnpm up ms-bpmn-js@$version
 
 # 提交版本更新代码到github
 git add .

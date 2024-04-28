@@ -20,7 +20,7 @@ import {
   downloadFile,
   formatNumber,
   toggleDark
-} from 'ms-bpmn'
+} from 'ms-bpmn-js'
 </script>
 ```
 
