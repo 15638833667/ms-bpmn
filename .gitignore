@@ -13,6 +13,8 @@ pnpm-lock.yaml
 
 docs/.vitepress/cache/*
 
+.vuepress/cache
+
 components.d.ts
 
 node_modules
