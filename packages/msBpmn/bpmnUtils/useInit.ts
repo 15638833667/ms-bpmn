@@ -12,7 +12,7 @@ import useGetData from './useGetData' // 获取数据
 import useBpmnListener from './useListener' // 保存数据
 
 const { createNewDiagram } = useGetData()
-const { addBpmnListener, addModelerListener } = useBpmnListener()
+const { addBpmnListener, addModelerListener, addEventBusListener } = useBpmnListener()
 export default function useInit(bpmnModeler, canvasRef) {
 
   const init = () => {
@@ -45,6 +45,7 @@ export default function useInit(bpmnModeler, canvasRef) {
     console.log('创建成功!')
     addBpmnListener(bpmnModeler)
     addModelerListener(bpmnModeler)
+    addEventBusListener(bpmnModeler)
   }
 
   return {

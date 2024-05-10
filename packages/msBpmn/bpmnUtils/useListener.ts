@@ -14,13 +14,27 @@ export default function useBpmnListener() {
   }
   const addModelerListener = (bpmnModeler) => {
     // 'shape.removed'
-    const events = ['shape.added', 'shape.move.end', 'connect.end', 'connection.create', 'connection.move', 'element.click', 'element.changed', 'element.updateLabel']
+    const events = ['shape.added', 'shape.move.end', 'connect.end', 'connection.create', 'connection.move']
+
+    events.forEach(function(eventType) {
+      bpmnModeler.on(eventType, e => {
+        console.log(eventType, e)
+
+        const elementRegistry = bpmnModeler.get('elementRegistry')
+        const shape = e.element ? elementRegistry.get(e.element.id) : e.shape
+        console.log('shape', shape)
+      })
+    })
+  }
+  const addEventBusListener = (bpmnModeler) => {
+    // 'shape.removed'
+    const events = ['element.click', 'element.changed', 'element.updateLabel']
 
     const eventBus = bpmnModeler.get('eventBus')
     events.forEach(function(eventType) {
       eventBus.on(eventType, e => {
         console.log(eventType, e)
-        if (!e || e.element?.type == 'bpmn:Process') return
+        if (!e || !e.element) return
         if (eventType === 'element.changed') {
           // that.elementChanged(e)
         } else if (eventType === 'element.click') {
@@ -30,14 +44,12 @@ export default function useBpmnListener() {
         } else if (eventType === 'element.updateLabel') {
           console.log('element.updateLabel', e.element)
         }
-        const elementRegistry = bpmnModeler.get('elementRegistry')
-        const shape = e.element ? elementRegistry.get(e.element.id) : e.shape
-        console.log('shape', shape)
       })
     })
   }
   return {
     addBpmnListener,
-    addModelerListener
+    addModelerListener,
+    addEventBusListener
   };
 }
