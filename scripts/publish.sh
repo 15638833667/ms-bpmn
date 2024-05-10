@@ -7,6 +7,10 @@ set -e
 # version=`jq -r .version package.json`
 # echo "发布前版本：$version"
 
+
+echo "执行脚本：$0"
+echo "commit信息：$1"
+
 # 打包构建
 npm run build
 
@@ -16,7 +20,7 @@ npm run build
 # 提交版本更新代码到github
 git add .
 
-git commit -m "feat: update && publish"
+git commit -m "$1"
 
 git pull
 
