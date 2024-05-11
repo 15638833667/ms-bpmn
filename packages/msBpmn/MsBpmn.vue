@@ -8,7 +8,7 @@
 <script setup lang="ts">
 // 引入相关的依赖
 import { ref, onMounted } from 'vue';
-import useInit from './bpmnUtils/useInit'
+import useInit from './bpmnMixins/useInit'
 // bpmn建模器
 let bpmnModeler = null;
 const canvasRef = ref(null);
