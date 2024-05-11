@@ -46,27 +46,6 @@ export default defineConfig({
               link: '/utils/started'
             }
           ]
-        },
-        {
-          text: '工具',
-          items: [
-            {
-              text: 'date 日期格式化',
-              link: '/utils/date-format'
-            },
-            {
-              text: 'debounce 防抖',
-              link: '/utils/debounce'
-            },
-            {
-              text: 'throttle 节流',
-              link: '/utils/throttle'
-            },
-            {
-              text: 'toggleDark 切换暗黑',
-              link: '/utils/toggle-dark'
-            }
-          ]
         }
       ]
     },

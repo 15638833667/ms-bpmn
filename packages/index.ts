@@ -1,17 +1,4 @@
 import './scss/global.scss'
-import {
-  dateFormat,
-  requestAnimationFrame,
-  cancelAnimationFrame,
-  rafTimeout,
-  cancelRaf,
-  throttle,
-  debounce,
-  add,
-  downloadFile,
-  formatNumber,
-  toggleDark
-} from './utils'
 import type { App } from 'vue'
 
 import MsButton from './msButton'
@@ -38,19 +25,6 @@ const install = (app: App): void => {
   components.forEach(component => app.component(component.__name as string, component))
 }
 
-export {
-  dateFormat,
-  requestAnimationFrame,
-  cancelAnimationFrame,
-  rafTimeout,
-  cancelRaf,
-  throttle,
-  debounce,
-  add,
-  downloadFile,
-  formatNumber,
-  toggleDark
-}
 export {
   MsButton,
   MsBpmn,
