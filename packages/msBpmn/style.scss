@@ -11,6 +11,8 @@
   :deep(.canvas){
     width: 100%;
     height: 100%;
+    background-image: linear-gradient(90deg, #ececec, 10%, transparent 0), linear-gradient(#ececec 10%, transparent 0);
+    background-size: 10px 10px;
     .custom-bpmn-task {
       background-image: url('https://hexo-blog-1256114407.cos.ap-shenzhen-fsi.myqcloud.com/rules.png');
       background-size: 30px 30px;

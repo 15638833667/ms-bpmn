@@ -29,6 +29,8 @@ export default function useBpmnListener() {
   const addEventBusListener = (bpmnModeler) => {
     // 'shape.removed'
     const events = ['element.click', 'element.changed', 'element.updateLabel']
+    const modeling = bpmnModeler.get('modeling')
+    const elementRegistry = bpmnModeler.get('elementRegistry');
 
     const eventBus = bpmnModeler.get('eventBus')
     events.forEach(function(eventType) {
@@ -38,9 +40,16 @@ export default function useBpmnListener() {
         if (eventType === 'element.changed') {
           // that.elementChanged(e)
         } else if (eventType === 'element.click') {
+          const shape = e.element ? elementRegistry.get(e.element.id) : e.shape
+          if (shape.type === 'bpmn:Task') {
+
+            modeling.updateProperties(shape, {
+              name: '我是修改后的Task名称',
+              isInterrupting: false,
+              customText: '我是自定义的text属性'
+            })
+          }
           console.log('点击了element', e)
-          // if (e.element.type === 'bpmn:Task') {
-          // }
         } else if (eventType === 'element.updateLabel') {
           console.log('element.updateLabel', e.element)
         }

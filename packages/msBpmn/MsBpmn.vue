@@ -2,7 +2,7 @@
 <template>
   <div class="ms-bpmn-container">
     <div class="canvas" ref="canvasRef"></div>
-    <div id="js-properties-panel" class="panel"></div>
+    <div id="ms-bpmn-properties-panel" class="panel"></div>
   </div>
 </template>
 <script setup lang="ts">

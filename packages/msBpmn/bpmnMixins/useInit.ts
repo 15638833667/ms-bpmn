@@ -26,12 +26,11 @@ export default function useInit(bpmnModeler, canvasRef) {
       container: canvasRef.value,
       //添加控制板
       propertiesPanel: {
-        parent: '#js-properties-panel'
+        parent: '#ms-bpmn-properties-panel'
       },
       additionalModules: [
         // 右边的属性栏
         BpmnPropertiesPanelModule,
-        // 左边工具栏以及节点
         BpmnPropertiesProviderModule,
         // 自定义工具栏
         CustomPaletteModule
