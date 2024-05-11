@@ -16,11 +16,13 @@ import type { App } from 'vue'
 
 import MsButton from './msButton'
 import MsBpmn from './msBpmn'
+import MsIcon from './msIcon'
 
 // 所有组件列表
 const components = [
   MsButton,
-  MsBpmn
+  MsBpmn,
+  MsIcon
 ]
 
 // 定义 install 方法
@@ -51,7 +53,8 @@ export {
 }
 export {
   MsButton,
-  MsBpmn
+  MsBpmn,
+  MsIcon
 }
 
 const MsBpmnJs = {

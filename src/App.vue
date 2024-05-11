@@ -1,6 +1,7 @@
 <template>
   <div class="ms-bpmn-test-container">
     <!-- <ms-button>test</ms-button> -->
+    <!-- <ms-icon iconName="AOC_a-yunyingleixing15x" /> -->
     <ms-bpmn></ms-bpmn>
   </div>
 </template>

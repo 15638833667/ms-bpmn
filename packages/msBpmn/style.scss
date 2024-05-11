@@ -8,14 +8,28 @@
   padding: 10px;
   box-sizing: border-box;
   border-radius: 5px;
-}
-.canvas{
-	width: 100%;
-	height: 100%;
-}
-.panel{
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 300px;
+  :deep(.canvas){
+    width: 100%;
+    height: 100%;
+    .custom-bpmn-task {
+      background-image: url('https://hexo-blog-1256114407.cos.ap-shenzhen-fsi.myqcloud.com/rules.png');
+      background-size: 30px 30px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    .lindaidai-task {
+      background: url('~/assets/rules.png') center no-repeat!important;
+      background-size: cover!important;
+      border: 1px solid transparent;
+    }
+    .lindaidai-task:hover {
+      border: 1px solid #ccc;
+    }
+  }
+  .panel{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+  }
 }

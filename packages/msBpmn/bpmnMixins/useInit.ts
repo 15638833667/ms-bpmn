@@ -4,6 +4,9 @@ import {
   BpmnPropertiesProviderModule
 } from 'bpmn-js-properties-panel'
 
+import CustomPaletteModule from '../components' // 自定义工具栏
+
+
 import camundaModdleDescriptor from 'camunda-bpmn-moddle/resources/camunda.json'
 
 import BpmnModeler from 'bpmn-js/lib/Modeler';
@@ -29,7 +32,9 @@ export default function useInit(bpmnModeler, canvasRef) {
         // 右边的属性栏
         BpmnPropertiesPanelModule,
         // 左边工具栏以及节点
-        BpmnPropertiesProviderModule
+        BpmnPropertiesProviderModule,
+        // 自定义工具栏
+        CustomPaletteModule
       ],
       moddleExtensions: {
         camunda: camundaModdleDescriptor
