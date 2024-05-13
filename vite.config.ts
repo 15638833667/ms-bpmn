@@ -66,7 +66,7 @@ export default defineConfig({
           "element-plus": "ElementPlus"
         },
         chunkFileNames: 'js/[name]-[hash].js',  // 引入文件名的名称
-        entryFileNames: 'js/[name]-[hash].js',  // 包的入口文件名称
+        entryFileNames: '[name].js',  // 包的入口文件名称
         assetFileNames: '[ext]/[name]-[hash].[ext]', // 资源文件像 字体，图片等
         inlineDynamicImports: false,
         manualChunks (id) {
