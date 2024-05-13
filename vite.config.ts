@@ -43,20 +43,7 @@ export default defineConfig({
       plugins: [
         terser()
       ],
-      external: ['vue', 'element-plus',
-        // "bpmn-js",
-        // "bpmn-js-bpmnlint",
-        // "bpmn-js-color-picker",
-        // "bpmn-js-connectors-extension",
-        // "bpmn-js-external-label-modeling",
-        // "bpmn-js-properties-panel",
-        // "bpmn-js-token-simulation",
-        // "bpmn-moddle",
-        // "bpmnlint",
-        // "@bpmn-io/add-exporter",
-        // "@bpmn-io/element-template-chooser",
-        // "@bpmn-io/properties-panel"
-      ],
+      external: ['vue', 'element-plus'],
       output: {
         name: 'MsBpmnJs',
         exports: 'named',
