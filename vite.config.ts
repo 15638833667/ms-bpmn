@@ -32,17 +32,31 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     lib: { // 构建为库。如果指定了 build.lib，build.cssCodeSplit 会默认为 false。
-      formats: ['es', 'umd'],
+      formats: ['es'],
       // __dirname 的值是 vite.config.ts 文件所在目录
       entry: resolve(__dirname, 'packages', 'index.ts'),  // entry 是必需的，因为库不能使用HTML作为入口。
       name: 'MsBpmnJs', // 暴露的全局变量
       fileName: 'index' // 输出的包文件名，默认是 package.json 的 name 选项
     },
+    chunkSizeWarningLimit: 1000,
     rollupOptions: { // 自定义底层的Rollup打包配置
       plugins: [
         terser()
       ],
-      external: ['vue', 'element-plus'],
+      external: ['vue', 'element-plus',
+        // "bpmn-js",
+        // "bpmn-js-bpmnlint",
+        // "bpmn-js-color-picker",
+        // "bpmn-js-connectors-extension",
+        // "bpmn-js-external-label-modeling",
+        // "bpmn-js-properties-panel",
+        // "bpmn-js-token-simulation",
+        // "bpmn-moddle",
+        // "bpmnlint",
+        // "@bpmn-io/add-exporter",
+        // "@bpmn-io/element-template-chooser",
+        // "@bpmn-io/properties-panel"
+      ],
       output: {
         name: 'MsBpmnJs',
         exports: 'named',
@@ -50,6 +64,15 @@ export default defineConfig({
         globals: {
           vue: 'Vue',
           "element-plus": "ElementPlus"
+        },
+        chunkFileNames: 'js/[name]-[hash].js',  // 引入文件名的名称
+        entryFileNames: 'js/[name]-[hash].js',  // 包的入口文件名称
+        assetFileNames: '[ext]/[name]-[hash].[ext]', // 资源文件像 字体，图片等
+        inlineDynamicImports: false,
+        manualChunks (id) {
+          if (id.includes('node_modules')) {
+            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+          }
         }
       }
     },
