@@ -4,7 +4,7 @@ export function importIconFontStyle() {
     const script = document.createElement('script')
     // script.async = true
 
-    script.src = 'https://at.alicdn.com/t/c/font_4301118_pj6310xqxue.js'
+    script.src = 'https://at.alicdn.com/t/c/font_4545467_mvgdwy0lzm.js'
     document.head.appendChild(script)
   }
 }

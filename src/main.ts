@@ -19,9 +19,15 @@ import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-codes.css'
 import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css'
 // 节点属性面板
 import 'bpmn-js-properties-panel/dist/assets/properties-panel.css'
+import "diagram-js-minimap/assets/diagram-js-minimap.css";
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+
 
 const app = createApp(App)
-// window.rafTimeout = rafTimeout // 挂载到window上，全局可用，无需引入
+
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, component)
+}
 
 app.use(ElementPlus)
 app.use(MsBpmnJs)

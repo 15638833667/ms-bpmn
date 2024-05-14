@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import vueJsx from "@vitejs/plugin-vue-jsx"
 import path, { resolve } from 'path';
 import dts from 'vite-plugin-dts';
 import AutoImport from 'unplugin-auto-import/vite'
@@ -11,6 +12,7 @@ import terser from '@rollup/plugin-terser'
 export default defineConfig({
   plugins: [
     vue(),
+    vueJsx(),
     dts({
       insertTypesEntry: true,
       cleanVueFileName: true,
@@ -23,6 +25,11 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     })
   ],
+  esbuild: {
+    jsxFactory: 'h',
+    jsxFragment: 'Fragment',
+    jsxInject: "import { h } from 'vue';"
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

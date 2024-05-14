@@ -12,7 +12,6 @@ export default function useSaveData () {
     bpmnModeler.saveXML().then(xml => {
       console.log('xml', xml)
     })
-
   };
 
   return {

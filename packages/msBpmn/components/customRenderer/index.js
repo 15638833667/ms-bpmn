@@ -5,7 +5,7 @@ import {
   attr as svgAttr,
   create as svgCreate,
 } from "tiny-svg";
-import { customElements, customConfig, hasLabelElements } from "../utils/util";
+import { customElements, customConfig, hasLabelElements } from "../utils/customUtils"
 
 const HIGH_PRIORITY = 1500;
 

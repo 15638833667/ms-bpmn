@@ -1,4 +1,3 @@
-
 import { xmlStr } from '../mock/xmlStr' // 这里是直接引用了xml字符串
 export default function useGetData() {
   const createNewDiagram = (bpmnModeler) => {
