@@ -17,6 +17,7 @@ import {
 import camundaModdleDescriptor from 'camunda-bpmn-moddle/resources/camunda.json'
 import BpmnModeler from 'bpmn-js/lib/Modeler';
 import minimapModule from "diagram-js-minimap";
+// import GridLineModule from 'diagram-js-grid-bg'
 
 import CustomPaletteModule from './components' // 自定义工具栏
 
@@ -45,10 +46,20 @@ const init = () => {
       // 右边的属性栏
       BpmnPropertiesPanelModule,
       BpmnPropertiesProviderModule,
+      // 小地图
       minimapModule,
+      // 网格线
+      // GridLineModule,
       // 自定义工具栏
       CustomPaletteModule
     ],
+    // gridLine: {
+    //   smallGridSpacing: 10,
+    //   gridSpacing: 50,
+    //   gridLineStroke: 0.2,
+    //   gridLineOpacity: 1,
+    //   gridLineColor: '#ccc'
+    // },
     moddleExtensions: {
       camunda: camundaModdleDescriptor
     }
