@@ -60,6 +60,9 @@ const init = () => {
     //   gridLineOpacity: 1,
     //   gridLineColor: '#ccc'
     // },
+    minimap: {
+      open: false
+    },
     moddleExtensions: {
       camunda: camundaModdleDescriptor
     }
