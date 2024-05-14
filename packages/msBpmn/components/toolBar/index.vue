@@ -5,7 +5,6 @@
     <Aligns></Aligns>
     <Scales></Scales>
     <Commands></Commands>
-    <!-- <ExternalTools></ExternalTools> -->
   </div>
 </template>
   
@@ -14,11 +13,9 @@
 
 import Imports from './components/Imports'
 import Exports from './components/Exports'
-// import Previews from './components/Previews'
 import Aligns from './components/Aligns'
 import Scales from './components/Scales'
 import Commands from './components/Commands'
-// import ExternalTools from './components/ExternalTools'
 
 import { inject } from 'vue'
 
