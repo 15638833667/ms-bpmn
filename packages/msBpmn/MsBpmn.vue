@@ -1,7 +1,7 @@
 
 <template>
   <div class="ms-bpmn-container">
-    <ToolBar v-if="showToolBar" :bpmnModeler="bpmnModeler" />
+    <ToolBar class="tool-bar" v-if="showToolBar" :bpmnModeler="bpmnModeler" />
     <div class="canvas" ref="canvasRef"></div>
     <div id="ms-bpmn-properties-panel" class="panel"></div>
   </div>
