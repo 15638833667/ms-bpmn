@@ -14,10 +14,11 @@ import {
   BpmnPropertiesPanelModule,
   BpmnPropertiesProviderModule
 } from 'bpmn-js-properties-panel'
-import camundaModdleDescriptor from 'camunda-bpmn-moddle/resources/camunda.json'
 import BpmnModeler from 'bpmn-js/lib/Modeler';
-import minimapModule from "diagram-js-minimap";
+import CamundaModdleDescriptor from 'camunda-bpmn-moddle/resources/camunda.json'
+import MinimapModule from "diagram-js-minimap";
 // import GridLineModule from 'diagram-js-grid-bg'
+import GridModule from 'diagram-js-grid';
 
 import CustomPaletteModule from './components' // 自定义工具栏
 
@@ -47,9 +48,11 @@ const init = () => {
       BpmnPropertiesPanelModule,
       BpmnPropertiesProviderModule,
       // 小地图
-      minimapModule,
+      MinimapModule,
       // 网格线
       // GridLineModule,
+      // 网格背景
+      GridModule,
       // 自定义工具栏
       CustomPaletteModule
     ],
@@ -64,7 +67,7 @@ const init = () => {
       open: false
     },
     moddleExtensions: {
-      camunda: camundaModdleDescriptor
+      camunda: CamundaModdleDescriptor
     }
   });
   // 初始化获取xml
