@@ -2,12 +2,8 @@
 
 *该组件库采用 `Vue@3.4.19`+ `TypeScript@5.3.3` + `Vite@5.1.4` + `Less@4.2.0` 实现！*<br/>
 *所有组件样式 `CSS` 均使用 `box-sizing: border-box;` 模式！*<br/>
-*目前共有 `55` 个常用基础 `UI` 组件，以及 `11` 个常用工具函数，并且持续探索更新中...！*<br/>
 *开箱即用！*
 
-## Document & Online preview
-
-[Vue3 Component Template](https://themusecatcher.github.io/ms-bpmn-js/)
 
 ## Install & Use
 
@@ -43,83 +39,47 @@ import 'ms-bpmn-js/css'
 </script>
 ```
 
-## Use CDN in Project
 
-```html
-<script src="https://unpkg.com/ms-bpmn-js@latest"></script>
-```
+## 依赖
 
-## Project
-
-- Get the project code
-
-```sh
-git clone https://github.com/themusecatcher/ms-bpmn-js.git
-```
-
-- Install dependencies
-
-```sh
-cd ms-bpmn-js
-
-pnpm i
-```
-
-- Run project
-
-```sh
-pnpm dev
-```
-
-## Components
-
-Component name | Descriptions | Component name | Descriptions
+Component name | Descriptions
 :-- | :-- | :-- | :--
-Alert | 警告提示 | Avatar | 头像
-BackTop | 回到顶部 | Badge | 徽标
-Breadcrumb | 面包屑 | Button | 按钮
-Card | 卡片 | Carousel | 走马灯
-Cascader | 级联选择 | Checkbox | 多选框
-Collapse | 折叠面板 | Countdown | 倒计时
-DatePicker | 日期选择 | Descriptions | 描述列表
-Dialog | 对话框 | Divider | 分割线
-Drawer | 抽屉 | Ellipsis | 文本省略
-Empty | 空状态 | Flex | 弹性布局
-Grid | 栅格 | Image | 图片
-Input | 输入框 | InputNumber | 数字输入框
-Message | 全局提示 | Modal | 信息提示
-Notification | 通知提醒 | NumberAnimation | 数值动画
-Pagination | 分页 | Popconfirm | 弹出确认
-Popover | 气泡卡片 | Progress | 进度条
-QRCode | 二维码 | Radio | 单选框
-Rate | 评分 | Result | 结果
-Select | 选择器 | Slider | 滑动输入条
-Space | 间距 | Spin | 加载中
-Statistic | 统计数值 | Steps | 步骤条
-Swiper | 触摸滑动插件 | Switch | 开关
-Table | 表格 | Tabs | 标签页
-Tag | 标签 | Textarea | 文本域
-TextScroll | 文字滚动 | Timeline | 时间轴
-Tooltip | 文字提示 | Upload | 上传
-Video | 播放器 | Waterfall | 瀑布流
-Watermark | 水印 | -- | --
+[@bpmn-io/add-exporter](https://github.com/bpmn-io/add-exporter) | 插入您喜欢的 BPMN、DMN 和 CMMN 编辑器，并将 和元数据添加到保存的图表中。
+[@bpmn-io/element-template-chooser](https://github.com/bpmn-io/element-template-chooser) | 一个简单的元素模板选择器。
+[@bpmn-io/properties-panel](https://github.com/bpmn-io/properties-panel) | 用于创建 bpmn-io 属性面板的库。
+[bpmn-js-bpmnlint](https://github.com/bpmn-io/bpmn-js-bpmnlint) | 基于bpmn-js的流程设计器校验实现
+[bpmn-js-color-picker](https://github.com/bpmn-io/bpmn-js-color-picker) | 此 bpmn-js 扩展将一个简单的颜色选择器添加到元素上下文垫中。颜色根据 BPMN in Color 提案序列化到 BPMN 2.0。
+[bpmn-js-connectors-extension](https://github.com/bpmn-io/bpmn-js-connectors-extension) | bpmn-js-连接器扩展
+[bpmn-js-external-label-modeling](https://github.com/miyuesc/bpmn-js-external-label-modeling) | 一个用来将Label标签渲染在节点外部的bpmn-js插件。
+[bpmn-js-properties-panel](https://github.com/bpmn-io/bpmn-js-properties-panel) | bpmn-js 的属性面板扩展，添加了编辑技术属性（generic 和 Camunda）的功能。
+[bpmn-js-token-simulation](https://github.com/bpmn-io/bpmn-js-token-simulation) | 符合 BPMN 2.0 规范的令牌模拟器，作为 bpmn-js 扩展构建。
+[bpmn-moddle](https://github.com/bpmn-io/bpmn-moddle) | 在 NodeJS 和浏览器中读取和写入 BPMN 2.0 逻辑示意图文件。
+[bpmnlint](https://github.com/bpmn-io/bpmnlint) | 根据可配置的 lint 规则验证 BPMN 图。
+[camunda-bpmn-moddle](https://github.com/camunda/camunda-bpmn-moddle) | 该项目将 BPMN 2.0 的 Camunda 命名空间扩展定义为 moddle 描述符。
+[diagram-js](https://github.com/bpmn-io/diagram-js) | 用于在 Web 上显示和修改图表的工具箱。
+[diagram-js-grid-bg](https://github.com/miyuesc/diagram-js-grid-bg) | diagram-js 的可视化网格背景，基于 diagram-js-grid。
+[diagram-js-minimap](https://github.com/bpmn-io/diagram-js-minimap) | diagram-js 的小地图。
 
-## Details
 
-[My CSDN Blogs](https://blog.csdn.net/Dandrose)
 
-## Functions
 
-Function name | Descriptions | Arguments
-:-- | :-- | :--
-dateFormat | 简单易用的日期格式化函数！ | (timestamp: number &#124; string &#124; Date, format = 'YYYY-MM-DD HH:mm:ss') => string
-requestAnimationFrame | 针对不同浏览器进行兼容处理！ | 使用方式不变
-cancelAnimationFrame | 针对不同浏览器进行兼容处理！ | 使用方式不变
-rafTimeout | 使用 requestAnimationFrame 实现的定时器函数，等效替代 (setTimeout 和 setInterval)！ | (func: Function, delay = 0, interval = false) => object
-cancelRaf | 用于取消 rafTimeout 函数！ | (raf: { id: number }) => void
-throttle | 使用 rafTimeout 实现的节流函数！ | (fn: Function, delay = 300) => any
-debounce | 使用 rafTimeout 实现的防抖函数！ | (fn: Function, delay = 300) => any
-add | 消除js加减精度问题的加法函数！ | (num1: number, num2: number) => number
-downloadFile | 下载文件并自定义文件名！ | (url: string, name: string) => void
-formatNumber | 数字格式化函数！ | (value: number &#124; string, precision = 2, separator = ',', decimal = '.', prefix = '', suffix = '') => string
-toggleDark | 一键切换暗黑模式函数！ | () => void
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
