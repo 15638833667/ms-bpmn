@@ -17,8 +17,17 @@ import {
 import BpmnModeler from 'bpmn-js/lib/Modeler';
 import CamundaModdleDescriptor from 'camunda-bpmn-moddle/resources/camunda.json'
 import MinimapModule from "diagram-js-minimap";
-// import GridLineModule from 'diagram-js-grid-bg'
-import GridModule from 'diagram-js-grid';
+// import GridLineModule from 'diagram-js-grid-bg' // 网格线
+import GridModule from 'diagram-js-grid'; // 网格背景
+
+// 以下为bpmn工作流绘图工具的样式
+import 'bpmn-js/dist/assets/diagram-js.css' // 左边工具栏以及编辑节点的样式
+import 'bpmn-js/dist/assets/bpmn-font/css/bpmn.css'
+import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-codes.css'
+import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css'
+// 节点属性面板
+import 'bpmn-js-properties-panel/dist/assets/properties-panel.css'
+import "diagram-js-minimap/assets/diagram-js-minimap.css";
 
 import CustomPaletteModule from './components' // 自定义工具栏
 
