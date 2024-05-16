@@ -5,7 +5,7 @@ const Imports = defineComponent({
   name: 'Imports',
   setup() {
     const bpmnModeler = inject('bpmnModeler', null)
-    console.log('import', bpmnModeler)
+    // console.log('import', bpmnModeler)
 
     const importRef = ref<HTMLInputElement | null>(null)
 

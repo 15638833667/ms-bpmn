@@ -5,7 +5,7 @@ const Exports = defineComponent({
   name: 'Exports',
   setup() {
     const bpmnModeler = inject('bpmnModeler', null)
-    console.log('import', bpmnModeler)
+    // console.log('import', bpmnModeler)
     
     // 下载流程图到本地
     /**

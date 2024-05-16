@@ -3,8 +3,8 @@
   <div class="ms-bpmn-container">
     <ToolBar class="tool-bar" v-if="showComponentStatus" :bpmnModeler="bpmnModeler" />
     <div class="canvas" ref="canvasRef"></div>
-    <div id="ms-bpmn-properties-panel" class="panel"></div>
-    <CustomProperties  v-if="showComponentStatus"></CustomProperties>
+    <!-- <div id="ms-bpmn-properties-panel" class="panel"></div> -->
+    <CustomProperties v-if="showComponentStatus" @form-change="formChange"></CustomProperties>
   </div>
 </template>
 <script setup lang="ts">
@@ -13,7 +13,7 @@ import ToolBar from './components/toolBar/index.vue';
 
 import CustomProperties from './components/customProperties/index.vue';
 
-import useInit from './bpmnMixins/useInit'
+import { useInit } from './bpmnMixins/useInit'
 
 // bpmn建模器
 let bpmnModeler = null;
@@ -24,6 +24,9 @@ const { init } = useInit() // 初始化
 
 provide('test', 'bpmnModelerTest')
 
+const formChange = (val) => {
+  console.log('formChange', val)
+}
 onMounted(() => {
   bpmnModeler = init(canvasRef)
   showComponentStatus.value = true

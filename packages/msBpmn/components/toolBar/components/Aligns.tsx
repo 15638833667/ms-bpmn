@@ -16,7 +16,7 @@ const Aligns = defineComponent({
     ]
 
     const bpmnModeler = inject('bpmnModeler', null)
-    console.log('scales', bpmnModeler)
+    // console.log('scales', bpmnModeler)
 
     let modeling: Modeling | null = bpmnModeler.get('modeling')
     let selection: Selection | null = bpmnModeler.get('selection')

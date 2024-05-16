@@ -5,9 +5,9 @@ const Scales = defineComponent({
   setup() {
 
     const bpmnModeler = inject('bpmnModeler', null)
-    console.log('scales', bpmnModeler)
+    // console.log('scales', bpmnModeler)
     const canvas = bpmnModeler.get('canvas')
-    console.log('canvas', canvas)
+    // console.log('canvas', canvas)
     const currentScale = ref(canvas.zoom())
     const setZoom = (newScale: number | string) => {
       canvas && canvas.zoom(newScale, newScale === 'fit-viewport' ? 'auto auto' : 'auto auto')

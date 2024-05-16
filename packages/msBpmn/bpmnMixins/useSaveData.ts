@@ -1,5 +1,5 @@
 
-export default function useSaveData () {
+export const useSaveData = () => {
   const saveBpmnWithSVG = (bpmnModeler) => {
     // 保存svg信息
     bpmnModeler.saveSVG().then(svg => {

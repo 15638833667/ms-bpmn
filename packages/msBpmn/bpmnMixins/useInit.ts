@@ -1,3 +1,4 @@
+import { onMounted, onBeforeUnmount } from 'vue'
 
 // 引入相关的依赖
 // import {
@@ -10,7 +11,7 @@ import MinimapModule from "diagram-js-minimap";
 // import GridLineModule from 'diagram-js-grid-bg' // 网格线
 import GridModule from 'diagram-js-grid'; // 网格背景
 
-import CustomPaletteModule from '../components' // 自定义工具栏
+// import CustomPaletteModule from '../components' // 自定义工具栏节点、渲染节点、节点配置
 
 // 以下为bpmn工作流绘图工具的样式
 import 'bpmn-js/dist/assets/diagram-js.css' // 左边工具栏以及编辑节点的样式
@@ -21,18 +22,19 @@ import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css'
 import 'bpmn-js-properties-panel/dist/assets/properties-panel.css'
 import "diagram-js-minimap/assets/diagram-js-minimap.css";
 
-import useGetData from './useGetData' // 获取数据
-import useBpmnListener from './useListener' // 保存数据
+import { useGetData } from './useGetData' // 获取数据
+import { useBpmnListener } from './useListener' // 保存数据
 
 const { createNewDiagram } = useGetData()
 const { addBpmnListener, addModelerListener, addEventBusListener } = useBpmnListener()
-export default function useInit() {
-  
+const { removeBpmnListener, removeModelerListener, removeEventBusListener } = useBpmnListener()
+export const useInit = () => {
+  let bpmnModeler = null
   const init = (canvasRef) => {
     // 获取到属性ref为“canvas”的dom节点
     console.log(canvasRef.value);
     // 建模
-    const bpmnModeler = new BpmnModeler({
+    bpmnModeler = new BpmnModeler({
       container: canvasRef.value,
       //添加控制板
       propertiesPanel: {
@@ -49,7 +51,7 @@ export default function useInit() {
         // 网格背景
         GridModule,
         // 自定义工具栏
-        CustomPaletteModule
+        // CustomPaletteModule
       ],
       // gridLine: {
       //   smallGridSpacing: 10,
@@ -86,7 +88,15 @@ export default function useInit() {
     addModelerListener(bpmnModeler)
     addEventBusListener(bpmnModeler)
   }
-
+  onMounted(() => {
+    console.log('onMounted')
+  })
+  onBeforeUnmount(() => {
+    removeBpmnListener(bpmnModeler)
+    removeModelerListener(bpmnModeler)
+    removeEventBusListener(bpmnModeler)
+    
+  })
   return {
     init
   };

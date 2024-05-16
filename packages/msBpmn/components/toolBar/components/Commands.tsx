@@ -5,11 +5,11 @@ const Commands = defineComponent({
   setup() {
 
     const bpmnModeler = inject('bpmnModeler', null)
-    console.log('Commands', bpmnModeler)
+    // console.log('Commands', bpmnModeler)
 
     const command = bpmnModeler.get('commandStack')
     
-    console.log('commandStack', command)
+    // console.log('commandStack', command)
     // 撤销
     const undo = () => {
       command && command.canUndo() && command.undo()
