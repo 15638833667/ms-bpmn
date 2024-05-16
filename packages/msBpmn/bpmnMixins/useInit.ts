@@ -54,14 +54,6 @@ export const useInit = () => {
       // },
       minimap: {
         open: true,
-        // size: {
-        //   width: 120,
-        //   height: 80
-        // },
-        canvas: {
-          width: 120,
-          height: 80
-        }
       },
       moddleExtensions: {
         camunda: CamundaModdleDescriptor

@@ -29,6 +29,7 @@ const canvasRef = ref(null); // 画布
 const showComponentStatus = ref(false); // 组件显示状态
 const formData = reactive({
   name: 'test',
+  id: '',
   label: 'test',
   description: new Date().getTime()
 })
@@ -72,6 +73,7 @@ onMounted(() => {
         const elementBusinessObject = event.element.businessObject // 元素对象
         console.log('event', event.element.businessObject)
         formData.name = elementBusinessObject.name || '' // 元素名称
+        formData.id = elementBusinessObject.id || '' // 元素名称
       }
       // if (eventType === 'element.changed') { // 元素改变事件
       //   // that.elementChanged(e)
