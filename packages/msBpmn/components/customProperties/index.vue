@@ -6,12 +6,31 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 
 const panelFormEmit = defineEmits(['form-change'])
 
+const formData = defineProps({
+  formData: {
+    type: Object,
+    default: () => {
+      return {}
+    }
+  }
+})
 const name = ref('') // 节点名称\
 
+watch(
+  () => formData.formData, 
+  (newVal) => {
+    console.log('formData', newVal)
+    name.value = newVal.name
+  },
+  {
+    immediate: true,
+    deep: true
+  }
+)
 const nameChange = () => {
   panelFormEmit('form-change', name.value)
 }

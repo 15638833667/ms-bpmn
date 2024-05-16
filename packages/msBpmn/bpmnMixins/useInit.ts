@@ -1,5 +1,3 @@
-import { onMounted, onBeforeUnmount } from 'vue'
-
 // 引入相关的依赖
 // import {
 //   BpmnPropertiesPanelModule,
@@ -22,12 +20,6 @@ import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css'
 import 'bpmn-js-properties-panel/dist/assets/properties-panel.css'
 import "diagram-js-minimap/assets/diagram-js-minimap.css";
 
-import { useGetData } from './useGetData' // 获取数据
-import { useBpmnListener } from './useListener' // 保存数据
-
-const { createNewDiagram } = useGetData()
-const { addBpmnListener, addModelerListener, addEventBusListener } = useBpmnListener()
-const { removeBpmnListener, removeModelerListener, removeEventBusListener } = useBpmnListener()
 export const useInit = () => {
   let bpmnModeler = null
   const init = (canvasRef) => {
@@ -75,28 +67,8 @@ export const useInit = () => {
         camunda: CamundaModdleDescriptor
       }
     });
-    // 初始化获取xml
-    createNewDiagram(bpmnModeler).then(() => {
-      initSuccess(bpmnModeler)
-    })
     return bpmnModeler
   };
-  
-  const initSuccess = (bpmnModeler) => {
-    console.log('创建成功!')
-    addBpmnListener(bpmnModeler)
-    addModelerListener(bpmnModeler)
-    addEventBusListener(bpmnModeler)
-  }
-  onMounted(() => {
-    console.log('onMounted')
-  })
-  onBeforeUnmount(() => {
-    removeBpmnListener(bpmnModeler)
-    removeModelerListener(bpmnModeler)
-    removeEventBusListener(bpmnModeler)
-    
-  })
   return {
     init
   };
